@@ -1,0 +1,186 @@
+
+.about-section {
+  background: #ffffff;
+  color: #243143;
+  padding: 90px 0;
+}
+
+.about-container {
+  max-width: 1200px;
+  padding: 0 48px;
+}
+
+/* Section heading */
+
+.about-heading {
+  margin-bottom: 48px;
+}
+
+.about-eyebrow {
+  display: block;
+  color: #298b86;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.about-heading h2 {
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.about-divider {
+  width: 65px;
+  height: 4px;
+  border-radius: 4px;
+  background: #58bdb7;
+}
+
+/* Biography */
+
+.about-section h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.about-section h3 span {
+  color: #298b86;
+}
+
+.about-section p {
+  color: #576477;
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+/* Details panel */
+
+.about-details {
+  background: #f4f8fa;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e6edf1;
+}
+
+.about-details h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.about-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.about-detail:last-child {
+  margin-bottom: 0;
+}
+
+.about-detail > i {
+  color: #298b86;
+  font-size: 1.4rem;
+}
+
+.about-detail div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.about-detail strong {
+  font-size: 0.9rem;
+}
+
+.about-detail span {
+  color: #657286;
+  font-size: 0.9rem;
+}
+
+/* Focus area cards */
+
+.about-focus {
+  margin-top: 80px;
+}
+
+.about-focus > h3 {
+  margin-bottom: 30px;
+}
+
+.focus-card {
+  height: 100%;
+  padding: 28px;
+  border: 1px solid #e6edf1;
+  border-radius: 12px;
+  background: #fff;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.focus-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(20, 35, 50, 0.08);
+}
+
+.focus-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #e5f5f3;
+  color: #298b86;
+  font-size: 1.5rem;
+}
+
+.focus-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.focus-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Mobile layout */
+
+@media (max-width: 767.98px) {
+  .about-section {
+    padding: 65px 0;
+  }
+
+  .about-container {
+    padding: 0 24px;
+  }
+
+  .about-heading {
+    margin-bottom: 35px;
+  }
+
+  .about-details {
+    padding: 24px;
+  }
+
+  .about-focus {
+    margin-top: 55px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .focus-card {
+    transition: none;
+  }
+}

@@ -1,5 +1,7 @@
-import Hero from "./components/Hero";
 import Sidebar from "./components/Sidebar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
 
       <main className="portfolio-main">
        <Hero />
+           <About />
+        <Footer />
       </main>
     </>
   );
