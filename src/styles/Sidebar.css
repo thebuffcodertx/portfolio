@@ -1,0 +1,144 @@
+
+:root {
+  --sidebar-width: 290px;
+  --sidebar-bg: #101722;
+  --sidebar-accent: #58bdb7;
+  --sidebar-muted: #a9b8ca;
+}
+
+.portfolio-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100dvh;
+  background: var(--sidebar-bg);
+  color: #fff;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-profile {
+  text-align: center;
+  padding: 40px 20px 25px;
+}
+
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #253a46;
+  border: 7px solid #29384b;
+  color: var(--sidebar-accent);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.sidebar-profile h2 {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.sidebar-profile p {
+  color: var(--sidebar-muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.sidebar-socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.sidebar-socials a {
+  color: #fff;
+  background: #253246;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+}
+
+.sidebar-socials a:hover {
+  background: var(--sidebar-accent);
+  color: var(--sidebar-bg);
+}
+
+.sidebar-nav {
+  padding: 20px;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--sidebar-muted);
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a:focus-visible {
+  background: #1a2936;
+  color: var(--sidebar-accent);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px 10px;
+  color: var(--sidebar-muted);
+  font-size: 11px;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1100;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--sidebar-accent);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1040;
+}
+
+@media (min-width: 992px) {
+  .portfolio-main {
+    margin-left: var(--sidebar-width);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .portfolio-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .portfolio-sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-sidebar {
+    transition: none;
+  }
+}
