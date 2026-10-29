@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router";
 
 import Sidebar from "./components/Sidebar";
@@ -27,14 +26,6 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route
-            path="*"
-            element={
-              <section className="container py-5">
-                <h1>Page not found</h1>
-              </section>
-            }
-          />
         </Routes>
 
         <Footer />
