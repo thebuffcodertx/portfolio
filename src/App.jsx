@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -6,10 +7,7 @@ function App() {
       <Sidebar />
 
       <main className="portfolio-main">
-        <section className="container-fluid p-5">
-          <h1>Portfolio Homepage</h1>
-          <p>Sidebar feature in development.</p>
-        </section>
+       <Hero />
       </main>
     </>
   );

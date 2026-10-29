@@ -1,7 +1,8 @@
 
 :root {
   --sidebar-width: 290px;
-  --sidebar-bg: #101722;
+  /* --sidebar-bg: #101722; */
+  --sidebar-bg: #040b14;
   --sidebar-accent: #58bdb7;
   --sidebar-muted: #a9b8ca;
 }
@@ -29,20 +30,24 @@
 .profile-avatar {
   width: 110px;
   height: 110px;
+  margin: 0 auto 15px;
+  border: 4px solid #29384b;
   border-radius: 50%;
-  background: #253a46;
-  border: 7px solid #29384b;
-  color: var(--sidebar-accent);
-  display: grid;
-  place-items: center;
-  margin: 0 auto 20px;
-  font-size: 32px;
-  font-weight: 700;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
 }
 
 .sidebar-profile h2 {
   font-size: 19px;
   font-weight: 700;
+  color: #fff;
 }
 
 .sidebar-profile p {
