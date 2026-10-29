@@ -101,9 +101,9 @@ export default function Sidebar() {
           ))}
         </nav>
 
-        <footer className="sidebar-footer">
+        {/* <footer className="sidebar-footer">
           <p>© {new Date().getFullYear()} Kourtney McCullough</p>
-        </footer>
+        </footer> */}
       </aside>
     </>
   );

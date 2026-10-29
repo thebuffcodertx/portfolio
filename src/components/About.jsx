@@ -1,118 +1,113 @@
 
 import "../styles/About.css";
 
-const focusAreas = [
-  {
-    icon: "bi-cloud",
-    title: "Cloud Engineering",
-    description: "Learning cloud infrastructure, networking, and deployment.",
-  },
-  {
-    icon: "bi-gear",
-    title: "DevOps & Automation",
-    description: "Exploring automation, containers, and CI/CD workflows.",
-  },
-  {
-    icon: "bi-code-slash",
-    title: "Web Development",
-    description: "Building responsive and accessible web applications.",
-  },
-];
-
 export default function About() {
   return (
     <section id="about" className="about-section">
       <div className="container-fluid about-container">
         <div className="about-heading">
-          <span className="about-eyebrow">GET TO KNOW ME</span>
+          <span className="about-eyebrow">THE STORY SO FAR</span>
           <h2>About Me</h2>
           <div className="about-divider" />
         </div>
 
-        <div className="row g-5 align-items-start">
-          <div className="col-lg-7">
-            <h3>
-              Building skills. Solving problems.
-              <span> Staying curious.</span>
-            </h3>
+        <div className="about-content">
+          <p className="about-intro">
+            I'm Kourtney McCullough, a U.S. Navy veteran and
+            developer working my way into AI-powered cloud
+            engineering.
+          </p>
 
-            <p>
-              I'm Kourtney McCullough, a developer with a
-              background in web development and a growing
-              interest in AI, cloud engineering, and DevOps.
-            </p>
+          <p>
+            I spent 11 years in the Navy, first as a
+            Machinist's Mate keeping shipboard systems running,
+            then as a Recruiter helping people find their next
+            path. Both roles taught me that reliable systems and
+            clear communication matter just as much in technology
+            as they did at sea.
+          </p>
 
-            <p>
-              I'm preparing to begin an AI Cloud Engineering
-              and DevOps program, where I'll expand my
-              knowledge of cloud infrastructure, automation,
-              and modern deployment practices.
-            </p>
+          <p>
+            After the Navy, I earned my B.A. in Business
+            Administration from Southern New Hampshire
+            University (SNHU) and spent six years as a Marketing
+            Developer at Primal Labs, building e-commerce funnels
+            and websites.
+          </p>
 
-            <p>
-              I created this portfolio to document that
-              journey—not just the projects I build, but
-              the challenges, lessons, and progress along
-              the way.
-            </p>
+          <p>
+            Now, I'm developing my skills through Code Platoon's
+            AI Cloud &amp; DevOps program, learning to build,
+            automate, and scale cloud infrastructure while
+            exploring how AI fits into modern engineering
+            workflows.
+          </p>
 
-            <p>
-              I believe in continuous learning, solving
-              real problems, and building things that serve
-              a purpose.
-            </p>
-          </div>
+          <p className="about-highlight">
+            This site is where I document the journey:{" "}
+            <strong>
+              what I'm learning, what I'm building, and what I'm
+              breaking along the way.
+            </strong>
+          </p>
 
-          <div className="col-lg-5">
-            <div className="about-details">
-              <h4>A Few Things About Me</h4>
+          <p>
+            When I'm not coding, you'll find me behind a camera,
+            in the gym, or creating videos for my YouTube channel,{" "}
+            <strong>
+              <a
+                className="text-link"
+                href="https://www.youtube.com/@buffcoder2430"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                BuffCoder
+              </a>
+            </strong>.
+          </p>
+        </div>
 
-              <div className="about-detail">
-                <i className="bi bi-code-square" aria-hidden="true" />
+        <div className="about-info">
+          <h3>A Few Details</h3>
+
+          <div className="row g-4">
+            <div className="col-md-6">
+              <div className="about-info-item">
+                <i className="bi bi-globe" aria-hidden="true" />
                 <div>
-                  <strong>Background</strong>
-                  <span>Web Development</span>
+                  <strong>Website: </strong>
+                  <a href="https://kourtneymccullough.com">
+                    kourtneymccullough.com
+                  </a>
                 </div>
               </div>
 
-              <div className="about-detail">
-                <i className="bi bi-mortarboard" aria-hidden="true" />
+              <div className="about-info-item">
+                <i className="bi bi-geo-alt" aria-hidden="true" />
                 <div>
-                  <strong>Current Focus</strong>
-                  <span>AI Cloud Engineering & DevOps</span>
-                </div>
-              </div>
-
-              <div className="about-detail">
-                <i className="bi bi-journal-code" aria-hidden="true" />
-                <div>
-                  <strong>My Approach</strong>
-                  <span>Hands-on learning and documentation</span>
+                  <strong>Location: </strong>
+                  <span>Dallas–Fort Worth, Texas</span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div className="about-focus">
-          <h3>What I'm Exploring</h3>
-
-          <div className="row g-4">
-            {focusAreas.map((area) => (
-              <div className="col-md-4" key={area.title}>
-                <article className="focus-card">
-                  <div className="focus-icon">
-                    <i
-                      className={`bi ${area.icon}`}
-                      aria-hidden="true"
-                    />
-                  </div>
-
-                  <h4>{area.title}</h4>
-                  <p>{area.description}</p>
-                </article>
+            <div className="col-md-6">
+              <div className="about-info-item">
+                <i className="bi bi-mortarboard" aria-hidden="true" />
+                <div>
+                  <strong>Education: </strong>
+                  <span>B.A. Business Administration, SNHU</span>
+                </div>
               </div>
-            ))}
+
+              <div className="about-info-item">
+                <i className="bi bi-briefcase" aria-hidden="true" />
+                <div>
+                  <strong>Background: </strong>
+                  <span>U.S. Navy Veteran · Web Developer</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
