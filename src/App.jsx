@@ -23,10 +23,18 @@ export default function App() {
 
       <main className="portfolio-main">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-        </Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/blog" element={<Blog />} />
+  <Route path="/blog/:slug" element={<BlogPost />} />
+  <Route
+    path="*"
+    element={
+      <section className="container py-5">
+        <h1>Page not found</h1>
+      </section>
+    }
+  />
+</Routes>
 
         <Footer />
       </main>
