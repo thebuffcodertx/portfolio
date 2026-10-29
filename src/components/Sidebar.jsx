@@ -4,7 +4,7 @@ import profileImage from "../assets/kourtney-headshot.png";
 
 const navigation = [
   { name: "Home", href: "#home", icon: "bi-house" },
-  { name: "About", href: "#about", icon: "bi-person" },
+  { name: "About", href: "/#about", icon: "bi-person" },
   { name: "Blog", href: "/blog", icon: "bi-journal-text" },
 
    // Future features
