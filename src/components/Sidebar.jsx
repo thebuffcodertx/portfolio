@@ -1,9 +1,13 @@
 import { useState } from "react";
 import "../styles/Sidebar.css";
 import profileImage from "../assets/kourtney-headshot.png";
+import { useLocation, useNavigate } from "react-router";
+
+
+
 
 const navigation = [
-  { name: "Home", href: "#home", icon: "bi-house" },
+  { name: "Home", href: "/", icon: "bi-house" },
   { name: "About", href: "/#about", icon: "bi-person" },
   { name: "Blog", href: "/blog", icon: "bi-journal-text" },
 
@@ -15,6 +19,37 @@ const navigation = [
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  
+  const location = useLocation();
+const navigate = useNavigate();
+
+const handleNavigation = (event, item) => {
+  setIsOpen(false);
+
+  if (item.name === "Blog") {
+    event.preventDefault();
+    navigate("/blog");
+    window.scrollTo({ top: 0, behavior: "instant" });
+    return;
+  }
+
+  event.preventDefault();
+
+  if (location.pathname !== "/") {
+    navigate(item.href);
+    return;
+  }
+
+  if (item.name === "Home") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  if (item.name === "About") {
+    document.getElementById("about")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+};
 
   return (
     <>
@@ -89,17 +124,17 @@ export default function Sidebar() {
         </div>
 
         <nav className="sidebar-nav" aria-label="Main navigation">
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-            >
-              <i className={`bi ${item.icon}`} aria-hidden="true" />
-              <span>{item.name}</span>
-            </a>
-          ))}
-        </nav>
+  {navigation.map((item) => (
+    <a
+      key={item.name}
+      href={item.href}
+      onClick={(event) => handleNavigation(event, item)}
+    >
+      <i className={`bi ${item.icon}`} aria-hidden="true" />
+      <span>{item.name}</span>
+    </a>
+  ))}
+</nav>
 
         {/* <footer className="sidebar-footer">
           <p>© {new Date().getFullYear()} Kourtney McCullough</p>
